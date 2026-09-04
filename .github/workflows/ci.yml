@@ -1,0 +1,23 @@
+name: Testes Java
+
+on:
+  push:
+    branches: [main, develop, "feature/**", "release/**", "hotfix/**"]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Compilar
+        run: javac -d out $(find src test -name "*.java")
+      - name: Executar testes
+        run: java -cp out catalogo.TodosOsTestes
