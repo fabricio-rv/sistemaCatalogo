@@ -1,0 +1,7 @@
+out/
+dados/
+*.class
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.iml
