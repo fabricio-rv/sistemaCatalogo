@@ -44,7 +44,7 @@ public class Main {
     }
 
     private void mostrarMenu() {
-        System.out.println("\nCATALOGO DE COLECIONAVEIS");
+        System.out.println("\nSISTEMA DE CATALOGO");
         System.out.println("1 - Cadastrar livro");
         System.out.println("2 - Cadastrar CD");
         System.out.println("3 - Cadastrar DVD");
